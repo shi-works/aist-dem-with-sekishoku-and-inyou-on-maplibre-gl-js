@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <title>産総研 シームレス標高タイル（統合DEM）+赤色立体地図（東京都）</title>
+    <title>産総研 シームレス標高タイル（統合DEM）+赤色立体地図・陰陽図（東京都）</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src='https://unpkg.com/maplibre-gl@3.4.1/dist/maplibre-gl.js'></script>
@@ -113,7 +113,7 @@
         // Attributionを折りたたみ表示
         map.addControl(new maplibregl.AttributionControl({
             compact: true,
-            customAttribution: '（<a href="https://twitter.com/shi__works" target="_blank">Twitter</a> | <a href="" target="_blank">Github</a>） '
+            customAttribution: '（<a href="https://twitter.com/shi__works" target="_blank">Twitter</a> | <a href="https://github.com/shi-works/aist-dem-with-sekishoku-and-inyou-on-maplibre-gl-js" target="_blank">Github</a>） '
         }));
 
         // 3D地形コントロール
@@ -129,9 +129,9 @@
             map.addSource("aist-dem", {
                 type: 'raster-dem',
                 tiles: [
-                    'numpng://tiles.gsj.jp/tiles/elev/land/{z}/{y}/{x}.png',
+                    'numpng://tiles.gsj.jp/tiles/elev/mixed/{z}/{y}/{x}.png',
                 ],
-                attribution: '<a href="https://tiles.gsj.jp/tiles/elev/tiles.html" target="_blank">産業技術総合研究所 シームレス標高タイル(陸域統合DEM)</a>',
+                attribution: '<a href="https://tiles.gsj.jp/tiles/elev/tiles.html" target="_blank">産業技術総合研究所 シームレス標高タイル(統合DEM)</a>',
                 tileSize: 256
             });
 
